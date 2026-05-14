@@ -1,5 +1,5 @@
 [README.md](https://github.com/user-attachments/files/27748504/README.md)
-# EPP Internship Bot 🚀
+# EPP Internship Bot 
 
 An automated internship posting bot for the **Engineering Pathways Program (EPP)** community. Every Tuesday, it scrapes LinkedIn for the latest engineering internships and posts them directly to Discord — no Handshake required, so students from any UC or CSU can access the opportunities.
 
