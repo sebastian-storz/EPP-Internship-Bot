@@ -3,7 +3,10 @@ import requests
 from jobspy import scrape_jobs
 
 # This pulls your secret Discord link from GitHub safely
-webhook_url = os.getenv("DISCORD_WEBHOOK_URL")
+webhook_urls = [
+    os.getenv("DISCORD_WEBHOOK_URL_1"),
+    os.getenv("DISCORD_WEBHOOK_URL_2"),
+]
 
 # 1. Search for public Engineering internships
 # This ensures any UC/CSU student can apply without Handshake issues
@@ -20,8 +23,8 @@ header = {
     "content": "📢 **Happy Tuesday @everyone! I've pulled this week's latest internship opportunities. Please review the details and application links below:**"
 }
 
-requests.post(webhook_url, json=header)
-
+for webhook_url in webhook_urls:
+    requests.post(webhook_url, json=header)
 
 # 2. Format and send to Discord
 for index, row in jobs.iterrows():
@@ -37,5 +40,5 @@ for index, row in jobs.iterrows():
             "color": 16776960 # UCLA Gold
         }]
     }
-
-    requests.post(webhook_url, json=payload)
+    for webhook_url in webhook_urls:
+        requests.post(webhook_url, json=payload)
