@@ -1,0 +1,22 @@
+name: Weekly Internship Post
+on:
+  schedule:
+    - cron: '0 16 * * 1' # Runs every Monday at 9:00 AM PST
+  workflow_dispatch: # Allows manual testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run script
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python main.py
