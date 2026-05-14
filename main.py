@@ -17,7 +17,7 @@ jobs = scrape_jobs(
 )
 
 header = {
-    "content": "📢 **This week's Engineering Internships**"
+    "content": "📢 **Happy Tuesday @everyone! I've pulled this week's latest internship opportunities. Please review the details and application links below:**"
 }
 
 requests.post(webhook_url, json=header)
