@@ -43,4 +43,4 @@ for index, row in jobs.iterrows():
     }
 for webhook_url in webhook_urls:
     if webhook_url and webhook_url.strip():
-        requests.post(webhook_url, json=header)
+        requests.post(webhook_url, json=payload)
