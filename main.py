@@ -24,7 +24,8 @@ header = {
 }
 
 for webhook_url in webhook_urls:
-    requests.post(webhook_url, json=header)
+    if webhook_url and webhook_url.strip():
+        requests.post(webhook_url, json=header)
 
 # 2. Format and send to Discord
 for index, row in jobs.iterrows():
@@ -40,5 +41,6 @@ for index, row in jobs.iterrows():
             "color": 16776960 # UCLA Gold
         }]
     }
-    for webhook_url in webhook_urls:
-        requests.post(webhook_url, json=payload)
+for webhook_url in webhook_urls:
+    if webhook_url and webhook_url.strip():
+        requests.post(webhook_url, json=header)
