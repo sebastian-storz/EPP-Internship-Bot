@@ -12,7 +12,7 @@ webhook_urls = [
 # This ensures any UC/CSU student can apply without Handshake issues
 jobs = scrape_jobs(
     site_name=["linkedin"],
-    search_term="Engineering Internship Summer 2026",
+    search_term="Engineering Intern",
     location="California",
     results_wanted=10,
     hours_old=168, # Pulls the last week of postings
