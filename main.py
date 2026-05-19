@@ -19,6 +19,8 @@ jobs = scrape_jobs(
     job_type="internship",
 )
 
+print(f"Jobs found: {len(jobs)}")
+
 header = {
     "content": "📢 **Happy Tuesday @everyone! I've pulled this week's latest internship opportunities. Please review the details and application links below:**"
 }
