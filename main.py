@@ -22,7 +22,7 @@ jobs = scrape_jobs(
 print(f"Jobs found: {len(jobs)}")
 
 header = {
-    "content": "📢 **Happy Tuesday @everyone! I've pulled this week's latest internship opportunities. Please review the details and application links below:**"
+    "content": "📢 **Happy Monday @everyone! I've pulled this week's latest internship opportunities. Please review the details and application links below:**"
 }
 
 for webhook_url in webhook_urls:
